@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
-const Header = () => {
+const Header = React.memo(() => {
   const [objState, setObjState] = useState({ name: 'World' })
 
   useEffect(() => {
@@ -12,8 +12,6 @@ const Header = () => {
       <h1>Hello {objState.name} !</h1>
     </header>
   )
-}
-
-Header.whyDidYouRender = true
+})
 
 export default Header
