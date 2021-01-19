@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
 const ExplicitState = () => {
-  console.log('Rendering ExplicitState')
   const [objState, setObjState] = useState({ name: 'World' })
+  console.log('Rendering ExplicitState, state:', objState)
 
   useEffect(() => {
     setObjState({ name: 'World' })

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
 const MemoState = React.memo(() => {
-  console.log('Rendering MemoState')
   const [objState, setObjState] = useState({ name: 'World' })
+  console.log('Rendering MemoState, state:', objState)
 
   useEffect(() => {
     setObjState({ name: 'World' })
