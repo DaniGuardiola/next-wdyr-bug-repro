@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
-const MemoState = React.memo(() => {
-  const [objState, setObjState] = useState({ name: 'World' })
+const MemoState = React.memo(({ count }) => {
+  const [objState, setObjState] = useState({ name: 'MemoState World' })
   console.log('Rendering MemoState, state:', objState)
 
   useEffect(() => {
-    setObjState({ name: 'World' })
-  }, [])
+    console.log('Setting objState in MemoState')
+    setObjState({ name: 'MemoState World' })
+  }, [count])
 
   return (
     <header>

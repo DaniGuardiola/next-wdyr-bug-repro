@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 
-const ExplicitState = () => {
-  const [objState, setObjState] = useState({ name: 'World' })
+const ExplicitState = ({ count }) => {
+  const [objState, setObjState] = useState({ name: 'ExplicitState World' })
   console.log('Rendering ExplicitState, state:', objState)
 
   useEffect(() => {
-    setObjState({ name: 'World' })
-  }, [])
+    console.log('Setting objState in ExplicitState')
+    setObjState({ name: 'ExplicitState World' })
+  }, [count])
 
   return (
     <header>

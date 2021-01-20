@@ -11,11 +11,11 @@ export default function Home () {
   }
   return (
     <div>
-      <button onClick={forceRerender}>Force re-render</button>
-      <ExplicitState />
-      <ExplicitProps data={{ name: 'World' }} />
-      <MemoState />
-      <MemoProps data={{ name: 'World' }} />
+      <button onClick={forceRerender}>Force re-render ({counter})</button>
+      <ExplicitState count={counter} />
+      <ExplicitProps data={{ name: 'ExplicitProps World' }} />
+      <MemoState count={counter} />
+      <MemoProps data={{ name: 'MemoProps World' }} />
     </div>
   )
 }
