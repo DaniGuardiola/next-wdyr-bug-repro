@@ -1,0 +1,13 @@
+{
+    "presets": [
+      [
+        "next/babel",
+        {
+          "preset-react": {
+            "importSource": "@welldone-software/why-did-you-render"
+          }
+        }
+      ]
+    ],
+    "plugins": []
+  }

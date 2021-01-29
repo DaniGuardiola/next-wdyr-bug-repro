@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const MemoState = React.memo(({ count }) => {
+const MemoState = ({ count }) => {
   const [objState, setObjState] = useState({ name: 'MemoState World' })
   console.log('Rendering MemoState, state:', objState)
 
@@ -14,8 +14,6 @@ const MemoState = React.memo(({ count }) => {
       <h1>Hello {objState.name}! (MemoState)</h1>
     </header>
   )
-})
+}
 
-MemoState.whyDidYouRender = true
-
-export default MemoState
+export default React.memo(MemoState)
